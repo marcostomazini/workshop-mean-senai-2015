@@ -1,4 +1,4 @@
-var Model = require('./model');
+var Model = require('./beer');
  
 var Controller = {
   create: function(req, res) {
