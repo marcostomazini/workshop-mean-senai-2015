@@ -17,3 +17,6 @@ https://www.youtube.com/watch?v=jAAVSYF-uIM
 
 # Middleware
 http://nomadev.com.br/node-js-express-o-que-%C3%A9-e-como-criar-um-middleware-desmistificando/
+
+# Angular
+https://github.com/angular/angular-seed
