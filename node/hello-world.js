@@ -1,10 +1,11 @@
-var http = require("http");
+var http = require("http"),
+	fs = require("fs");
+
+var index = fs.readFileSync('index.html');
 
 http.createServer(function(request, response) {
 response.writeHead(200, 
-{"Content-Type": "text/plain"});
-  // response.write("Hello World");
-  // response.end();
-  response.end("Hello World");
+{"Content-Type": "text/html"});
+  response.end(index);
 }).listen(3000);
 console.log('Entre em http://localhost:3000/');
