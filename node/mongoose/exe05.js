@@ -27,26 +27,14 @@ var Schema = mongoose.Schema
   , Beer = mongoose.model('Beer', BeerSchema)
   ;
 
+var query = {name: /brahma/i};
 
-var query = {name: /heineken/i}
-  , mod = {
-      name: 'Brahma'
-    , alcohol: 4
-    , price: 6
-    }
-  , optional = {
-      upsert: false // se true ele cria o objeto se nao existir
-    , multi: true // atualiza varios malandros
-    }
-  ;
-
-Beer.update(query, mod, optional, function (err, data) {
+Beer.remove(query, function (err, data) {
   if (err){
     console.log('Erro: ', err);
   }
   else{
-    console.log('Cervejas atualizadas com sucesso: ', data);
+    console.log('Cerveja deletada com sucesso', data.result);    
   }
-  process.exit(0);
 });
 
