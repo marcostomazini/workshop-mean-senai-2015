@@ -15,7 +15,7 @@ db.on('disconnected', function(err){
     console.log('Desconectado');
 });
 
-var Cat = mongoose.model('Cat', { name: String });
+var Cat = mongoose.model('Cat', { name: String }, 'gatinhos');
 
 var kitty = new Cat({ name: 'Osvaldinho' });
 kitty.save(function (err, data) {
